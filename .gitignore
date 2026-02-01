@@ -1,0 +1,10 @@
+.venv
+.idea
+.vscode
+.env
+.claude
+.pytest_cache
+.DS_Store
+.git
+__pycache__/
+*.pyc
