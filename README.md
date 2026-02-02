@@ -3,6 +3,8 @@
 A multi-agent conversational AI for querying e-commerce marketplace data using natural
 language.
 
+<img width="3456" height="1998" alt="chainlit launch screen" src="https://github.com/user-attachments/assets/6b5114f4-9db3-48ab-8a01-3334e3b3c982" />
+
 ## Features
 
 - **Multi-agent architecture** - Supervisor agent routes queries to specialized customer
