@@ -96,7 +96,7 @@ Edit `config.py` and set environment variables:
 
 | Setting           | Default               | Description                       |
 |-------------------|-----------------------|-----------------------------------|
-| `LLM_PROVIDER`    | `groq`                | LLM provider (`gemini` or `groq`) |
+| `LLM_PROVIDER`    | `gemini`              | LLM provider (`gemini` or `groq`) |
 | `LLM_TEMPERATURE` | `0.1`                 | Model temperature                 |
 | `GEMINI_MODEL`    | `gemini-2.5-flash`    | Gemini model name                 |
 | `GROQ_MODEL`      | `qwen/qwen3-32b`      | Groq model name                   |
