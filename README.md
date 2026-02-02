@@ -135,14 +135,14 @@ Open http://localhost:8000 in your browser.
 
 ### Example Queries
 
-| Query                                        | Routed To      |
-|----------------------------------------------|----------------|
-| "Who are the top 5 sellers by revenue?"      | Seller Agent   |
-| "What is the breakdown of review scores?"    | Customer Agent |
-| "Show me customer statistics for all states" | Customer Agent |
-| "How is our order fulfillment performing?"   | Customer Agent |
-| "Compare seller performance across regions"  | Seller Agent   |
-| "What's the marketplace health overview?"    | Both Agents    |
+| Query                                              | Routed To      |
+|----------------------------------------------------|----------------|
+| "Who are the top 5 sellers by revenue?"            | Seller Agent   |
+| "How many customers are in São Paulo?"             | Customer Agent |
+| "Show me customer statistics for all states"       | Customer Agent |
+| "Compare seller performance across regions"        | Seller Agent   |
+| "Which state has the highest average order value?" | Customer Agent |
+| "What's the marketplace health overview?"          | Both Agents    |
 
 ## Project Structure
 
