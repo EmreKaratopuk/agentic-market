@@ -64,12 +64,17 @@ For cross-domain questions, both agents are called and results are synthesized.
    ```
 
 2. Install dependencies:
+
+   **With uv (recommended):**
    ```bash
    uv sync
    ```
-   Or with pip:
+
+   **With pip:**
    ```bash
-   pip install -e .
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   pip install -r requirements.txt
    ```
 
 3. Set up environment variables:
@@ -143,7 +148,8 @@ Open http://localhost:8000 in your browser.
 
 ```
 ├── .env.sample            # Environment variables template
-├── pyproject.toml         # Project dependencies and metadata
+├── pyproject.toml         # Project dependencies and metadata (for uv)
+├── requirements.txt       # Dependencies for pip users
 ├── app.py                 # Chainlit entry point, message handlers
 ├── config.py              # Settings (LLM provider, models, paths)
 ├── data/                  # Olist CSV datasets
