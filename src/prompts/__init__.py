@@ -80,3 +80,21 @@ def get_seller_prompt() -> str:
         "shared/verification",
         "shared/avoid",
     )
+
+
+@lru_cache
+def get_policy_prompt() -> str:
+    """Load and compose the policy agent's system prompt."""
+    return load(
+        # Beginning (high attention) - identity and thinking
+        "policy/role",
+        "shared/chain_of_thought",
+        # Middle (low attention) - reference material
+        "policy/tools",
+        "shared/clarification",
+        "policy/examples",
+        # End (high attention) - output and constraints
+        "shared/output_format",
+        "shared/verification",
+        "shared/avoid",
+    )

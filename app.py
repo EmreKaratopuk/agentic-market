@@ -6,6 +6,7 @@ from langchain_core.runnables import RunnableConfig
 
 from src.agents.supervisor_agent import get_supervisor_agent
 from src.database import get_database
+from src.vectorstore import get_vectorstore
 from src.guardrails import input_guard
 
 
@@ -25,8 +26,8 @@ async def set_starters(user: cl.User | None):
             message="Which sellers have the highest customer ratings?",
         ),
         cl.Starter(
-            label="State Comparison",
-            message="Compare customer activity and seller performance across all states.",
+            label="Seller Requirements",
+            message="What are the requirements to start selling on the marketplace?",
         ),
     ]
 
@@ -92,6 +93,7 @@ async def on_message(message: cl.Message):
 def main():
     load_dotenv()
     get_database()
+    get_vectorstore()
 
     run_chainlit(__file__)
 
