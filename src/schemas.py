@@ -21,3 +21,28 @@ class DBQueryError(BaseModel):
 
 
 DBQueryResult = DBQuerySuccess | DBQueryError
+
+
+class DocSearchResult(BaseModel):
+    """A single semantic search result."""
+
+    content: str = Field(description="Retrieved text chunk")
+    source: str = Field(description="Source document filename")
+    score: float = Field(description="Similarity score (0–1)")
+
+
+class DocSearchSuccess(BaseModel):
+    """Successful knowledge base search result."""
+
+    success: Literal[True] = True
+    results: list[DocSearchResult] = Field(description="Retrieved chunks")
+
+
+class DocSearchError(BaseModel):
+    """Failed knowledge base search result."""
+
+    success: Literal[False] = False
+    error: str = Field(description="Error message")
+
+
+DocSearchQueryResult = DocSearchSuccess | DocSearchError

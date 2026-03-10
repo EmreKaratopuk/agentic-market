@@ -20,7 +20,14 @@ class Settings(BaseSettings):
     database_path: Path = Path("marketplace_data.db")
     data_dir: Path = Path("data")
 
-    # Debug mode - set DEBUG=true in .env to enable verbose logging
+    # Vector store
+    qdrant_path: Path = Path("qdrant_storage")
+    qdrant_collection: str = "marketplace_docs"
+    docs_dir: Path = Path("docs")
+
+    # Embeddings
+    embedding_model: str = "gemini-embedding-001"
+
     debug: bool = True
 
 
